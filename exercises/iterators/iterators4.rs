@@ -3,9 +3,13 @@
 // Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 pub fn factorial(num: u64) -> u64 {
+    // Either of these ways works. Remember ranges use "one past the end" notation
+    // for their upper bound, just like the C++ Standard Library!
+    (1..num+1).fold(1, |acc, x| acc * x)
+    // (1..num+1).reduce(|acc, x| acc * x).unwrap_or(1)
+
     // Complete this function to return the factorial of num
     // Do not use:
     // - return
